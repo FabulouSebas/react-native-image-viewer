@@ -46,7 +46,7 @@ export default class ImageViewer extends React.Component<Props, State> {
   }
 
   public componentWillReceiveProps(nextProps: Props) {
-    this.init(this.props)
+    this.init(nextProps)
   }
 
   /**
