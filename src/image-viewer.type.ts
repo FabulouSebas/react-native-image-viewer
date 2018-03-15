@@ -60,9 +60,6 @@ export class Props {
     //
   }
 
-  /*public renderImage?: (width?: number, height?: number, url?: string)=> void = () => {
-    //
-  }*/
   /**
    * 单击回调
    */
