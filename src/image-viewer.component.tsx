@@ -487,6 +487,7 @@ export default class ImageViewer extends React.Component<Props, State> {
             </Wrapper>
           )
         case "success":
+          const url = image.url.indexOf('file://')? require(image.url): { uri: image.url };
           return (
             <ImageZoom
               key={index}
@@ -507,7 +508,7 @@ export default class ImageViewer extends React.Component<Props, State> {
                   width,
                   height
                 }}
-                source={require(image.url)}
+                source={url}
               />
             </ImageZoom>
           )
