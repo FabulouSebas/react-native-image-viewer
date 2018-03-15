@@ -10,6 +10,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native"
+import { CacheManager } from "react-native-expo-image-cache";
 import ImageZoom from "react-native-image-pan-zoom"
 import styles from "./image-viewer.style"
 import { IImageInfo, IImageSize, Props, State } from "./image-viewer.type"
@@ -501,6 +502,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               imageWidth={width}
               imageHeight={height}
             >
+<<<<<<< HEAD
               {this.props.renderImage?
                 this.props.renderImage(width, height, image.url)
                 : <Image
@@ -511,6 +513,15 @@ export default class ImageViewer extends React.Component<Props, State> {
                   }}
                   source={{ uri: image.url }} />
                 }
+=======
+              <CacheManager
+                style={{
+                  ...this.styles.imageStyle,
+                  width,
+                  height
+                }}
+                source={{ uri: image.url }}
+>>>>>>> 155f0c2cff18b06614b0dd63b88276c403783adf
               />
             </ImageZoom>
           )
@@ -531,7 +542,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               }
             >
               {this.props.failImageSource && (
-                <Image
+                <CacheManager
                   source={{
                     uri: this.props.failImageSource.url
                   }}
