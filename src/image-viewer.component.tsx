@@ -501,14 +501,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               imageWidth={width}
               imageHeight={height}
             >
-              <Image
-                style={{
-                  ...this.styles.imageStyle,
-                  width,
-                  height
-                }}
-                source={{ uri: image.url }}
-              />
+              <View style={{backgroundColor: '#fff'}}><Text style={{color: '#000'}}>ALLO</Text></View>
             </ImageZoom>
           )
         case "fail":
