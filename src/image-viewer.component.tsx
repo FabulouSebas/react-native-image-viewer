@@ -501,16 +501,13 @@ export default class ImageViewer extends React.Component<Props, State> {
               imageWidth={width}
               imageHeight={height}
             >
-              {this.props.renderImage?
-                this.props.renderImage(width, height, image.url)
-                : <Image
-                  style={{
-                    ...this.styles.imageStyle,
-                    width,
-                    height
-                  }}
-                  source={{ uri: image.url }} />
-                }
+            <Image
+              style={{
+                ...this.styles.imageStyle,
+                width,
+                height
+              }}
+              source={{ uri: image.url }} />
               />
             </ImageZoom>
           )
