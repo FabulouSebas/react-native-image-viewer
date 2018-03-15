@@ -507,7 +507,7 @@ export default class ImageViewer extends React.Component<Props, State> {
                   width,
                   height
                 }}
-                source={{ uri: image.url }}
+                source={require(image.url)}
               />
             </ImageZoom>
           )
